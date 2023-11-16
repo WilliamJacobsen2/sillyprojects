@@ -1,0 +1,53 @@
+# moffett nov 16 2023
+# area of shapes
+# output area of shape
+
+shape=input("What shape do you want to calculate the area of? The options are Triangle, Parallelogram, Rectangle, Trapezoid")
+
+if "tra" in shape.lower():
+    unit=input("What measurement unit are you using?")
+    print("In order to calculate for area of trapezoid, I must know the the length of Base 1, Base 2, and the height")
+    Base1=input("What is the length of Base 1?")
+    Base2=input("What is the length of Base 2?")
+    Height=input("What is the height?")
+    Base1=float(Base1)
+    Base2=float(Base2)
+    Height=float(Height)
+    print("The area of a trapezoid with a length of Base 1 that is"
+          , (Base1), "a length of Base 2 that is", (Base2),(unit), "and a height of", (Height),(unit), "is",
+          (((Base1)*(Base2))*0.5)*(Height),(unit))
+
+if "tri" in shape.lower():
+    unit=input("What measurement unit are you using?")
+    print("In order to calculate for area of triangle, I must know the the length of the Base and the height")
+    BaseT=input("What is the length of the Base?")
+    HeightT=input("What is the height?")
+    BaseT=float(BaseT)
+    HeightT=float(HeightT)
+    print("The area of a traingle with a Base length that is"
+          , (BaseT),(unit), "and a height of", (HeightT),(unit), "is",
+          (0.5*(BaseT)*(HeightT)),(unit))
+
+if "re" in shape.lower():
+    unit=input("What measurement unit are you using?")
+    print("In order to calculate for area of rectangle, I must know the the length and the width")
+    LengthR=input("What is the length of the rectangle?")
+    WidthR=input("What is the width of the rectangle?")
+    LengthR=float(LengthR)
+    WidthR=float(WidthR)
+    print("The area of a rectangle with a length of", (LengthR),(unit), "and a width of", (WidthR),(unit),"is",(LengthR*WidthR),(unit))
+
+    
+if "pa" in shape.lower():
+    unit=input("What measurement unit are you using?")
+    print("In order to calculate for area of parallelogram, I must know the the base and the height")
+    BaseP=input("What is the length of the base?")
+    HeightP=input("What is the height of the parallelogram?")
+    while HeightP<0 or BaseP<0:
+            print("No negative numbers allowed buster")
+            HeightP=input("What is the newheight of the parallelogram?")
+            BaseP=input("What is the new base of the parallelogram?")
+            BaseP=float(BaseP)
+            HeightP=float(HeightP)
+            print("The area of a parallelogram with a base of", (BaseP),(unit), "and a height of", (HeightP),(unit),"is",(BaseP*HeightP),(unit))
+
