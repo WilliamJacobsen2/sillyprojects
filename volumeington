@@ -1,0 +1,46 @@
+# moffett 14 nov 2023
+# volumes of shapes
+# output volumes of a few shapes
+
+question=input("Do you want to calculate the volume of a sphere, cylinder or cone?")
+
+
+import math
+
+PI=math.pi
+
+#while question!="sphere" or question!="cone" or question!="cylinder":
+    #question=input("Respond with sphere, cylinder, or cone")
+    #print("Did you make a typo? Try again")
+    
+    
+
+if question.lower()=="sphere":
+    unit=input("What unit of measurement do you want to use?")
+    print("In order to calculate the volume, I need to know the radius")
+    radius=input("What is the radius of the sphere?")
+    while input<"0":
+        print("Use a number")
+    radius=input("What is the radius of the sphere?")
+    radius=float(radius)
+    print("The volume of a sphere with a radius of", (radius), 'is', (4/3*(PI))*(radius**3),(unit))
+    
+if question.lower()=="cylinder":
+    unit=input("What unit of measurement do you want to use?")
+    print("In order to calculate the volume, I need to know the radius and the height")
+    radius=input("What is the radius of the cylinder?")
+    radius=float(radius)
+    height=input("What is the height of the cylinder")
+    height=float(height)
+    print("The volume of a sphere with a radius of", (radius), "and a height of", (height), "is", (PI)*(radius**2)*(height),(unit))
+    
+
+if question.lower()=="cone":
+    unit=input("What unit of measurement do you want to use?")
+    print("In order to calculate the volume, I need to know the radius and the height")
+    radius=input("What is the radius of the cone?")
+    radius=float(radius)
+    height=input("What is the height of the cone?")
+    height=float(height)
+    print("The volume of a cone with a radius of", (radius), "and a height of", (height), 'is', (PI)*(radius**2)*(height/3),(unit))
+
